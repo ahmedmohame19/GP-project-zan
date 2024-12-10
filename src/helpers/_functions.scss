@@ -1,0 +1,31 @@
+@mixin Breakpoints($point) {
+    @if $point ==mobile {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $point ==small {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    } @else if $point ==medium {
+        @media (min-width: 991px) and (max-width: 1199px) {
+            @content;
+        }
+    } @else if $point ==large {
+        @media (min-width: 1199px) {
+            @content;
+        }
+    }
+}
+
+// $BaseColor: #f1cfd2;
+// $secondColor: #f7f7f2;
+// $Fifth: #f1ecea;
+
+// $therdColor: #bc7171;
+// $fourdColor: #d48383;
+// $HoverColor: #d48383;
+
+@mixin Animtation($Time, $Type, $Prop) {
+    transition: $Time $Type $Prop;
+}
