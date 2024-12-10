@@ -1,21 +1,81 @@
 @use "../../helpers/functions" as *;
 .main-landing {
-    height: 800px;
+    height: 100vh;
     width: 100%;
     background-image: url("../../Assets/Assets/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    @include Breakpoints(mobile) {
-        background-image: url("../../Assets/Assets/background.png");
-        background-repeat: no-repeat;
-        object-fit: cover;
-        background-position: center;
-    }
-    @include Breakpoints(small) {
-        background-image: url("../../Assets/Assets/background.png");
-        background-repeat: no-repeat;
-        object-fit: cover;
-        background-position: center;
+    // @include Breakpoints(mobile) {
+    //     background-repeat: no-repeat;
+    //     object-fit: cover;
+    //     background-position: center;
+    // }
+    // @include Breakpoints(small) {
+    //     background-repeat: no-repeat;
+    //     object-fit: cover;
+    //     background-position: center;
+    // }
+    .text {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 4vw;
+            color: white;
+            @include Breakpoints(mobile) {
+                font-size: 7vw;
+            }
+        }
+        h1 {
+            font-size: 5vw;
+            color: white;
+            @include Breakpoints(mobile) {
+                font-size: 8vw;
+            }
+            span {
+                color: $secondColor;
+            }
+        }
+        p {
+            margin-top: 15px;
+            color: white;
+            @include Breakpoints(mobile) {
+                text-align: center;
+            }
+        }
+        .search {
+            position: relative;
+            width: 25%;
+            @include Breakpoints(mobile) {
+                width: 90%;
+            }
+            svg {
+                position: absolute;
+                top: 45px;
+                right: 5px;
+                color: white;
+                font-size: 40px;
+                background-color: $secondColor;
+                padding: 5px;
+                @include Breakpoints(mobile) {
+                    top: 65px;
+                    right: 5px;
+                }
+            }
+            input {
+                margin-top: 40px;
+                background-color: rgba(0, 0, 0, 0.442);
+                width: 100%;
+                height: 50px;
+                border: 1px solid white;
+                @include Breakpoints(mobile) {
+                    margin-top: 60px;
+                }
+            }
+        }
     }
 }
