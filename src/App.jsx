@@ -1,6 +1,6 @@
 
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import Landing from './pages/Landing/Landing';
 import Layout from './components/Layout/Layouts';
 import { Suspense } from 'react';

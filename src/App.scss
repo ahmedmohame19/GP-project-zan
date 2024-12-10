@@ -1,0 +1,20 @@
+@use "./helpers/functions" as *;
+.App {
+  text-align: center;
+}
+body {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.618);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 20px;
+  }
+}
