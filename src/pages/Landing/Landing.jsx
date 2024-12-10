@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Landing.scss"
 import { GoSearch } from "react-icons/go";
+import Why from '../../components/Why/Why';
 export default function Landing() {
   return <>
     <div className="main-landing">
@@ -16,6 +17,6 @@ export default function Landing() {
         </div>
       </div>
     </div>
-
+    <Why />
   </>
 }

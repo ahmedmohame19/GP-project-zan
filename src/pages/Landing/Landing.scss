@@ -6,16 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    // @include Breakpoints(mobile) {
-    //     background-repeat: no-repeat;
-    //     object-fit: cover;
-    //     background-position: center;
-    // }
-    // @include Breakpoints(small) {
-    //     background-repeat: no-repeat;
-    //     object-fit: cover;
-    //     background-position: center;
-    // }
+    background-attachment: fixed;
     .text {
         width: 100%;
         height: 70%;
