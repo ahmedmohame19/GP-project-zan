@@ -1,0 +1,21 @@
+@use "../../helpers/functions" as *;
+.main-landing {
+    height: 800px;
+    width: 100%;
+    background-image: url("../../Assets/Assets/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include Breakpoints(mobile) {
+        background-image: url("../../Assets/Assets/background.png");
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-position: center;
+    }
+    @include Breakpoints(small) {
+        background-image: url("../../Assets/Assets/background.png");
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-position: center;
+    }
+}

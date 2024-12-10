@@ -1,5 +1,9 @@
 @use "../../helpers/functions" as *;
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     .mainnav {
         display: flex;
         flex-direction: row;
@@ -17,7 +21,9 @@ nav {
             }
         }
     }
-    background-image: url("../../Assets/header/Navbg.png");
+    background-image: url("../../Assets/Assets/background.png");
+    background-size: cover;
+    background-position: top;
     padding: 10px;
     ul {
         button {
