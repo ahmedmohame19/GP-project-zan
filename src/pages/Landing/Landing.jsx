@@ -37,6 +37,7 @@ export default function Landing() {
         className="main-landing"
         initial="hidden"
         animate="visible"
+        // whileInView={"visible"}
         variants={containerVariants}
       >
         <div className="text">

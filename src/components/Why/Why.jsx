@@ -28,8 +28,7 @@ export default function Why() {
         <motion.div
             className="main-why my-5"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.01 }}
+            whileInView={"visible"}
             variants={containerVariants}
         >
             <motion.h1 className="my-5" variants={itemVariants}>
