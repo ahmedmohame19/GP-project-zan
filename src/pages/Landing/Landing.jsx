@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { GoSearch } from "react-icons/go";
 import Why from "../../components/Why/Why";
 import "./Landing.scss";
+import Category from "../../components/Categoery/Category";
 
 export default function Landing() {
 
@@ -62,6 +63,7 @@ export default function Landing() {
         </div>
       </motion.div>
       <Why />
+      <Category />
     </>
   );
 }
