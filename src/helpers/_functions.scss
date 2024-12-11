@@ -19,13 +19,13 @@
 }
 
 // $BaseColor: #f1cfd2;
-$secondColor: #F54C34;
+$secondColor: #f54c34;
 // $Fifth: #f1ecea;
 
 // $therdColor: #bc7171;
 // $fourdColor: #d48383;
 // $HoverColor: #d48383;
 
-@mixin Animtation($Time, $Type, $Prop) {
+@mixin Animation($Time, $Type, $Prop) {
     transition: $Time $Type $Prop;
 }
