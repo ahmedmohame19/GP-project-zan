@@ -5,6 +5,7 @@ import Why from "../../components/Why/Why";
 import "./Landing.scss";
 import Category from "../../components/Categoery/Category";
 import Oursecrvices from "../../components/Ourservices/Oursecrvices";
+import Opinions from "../../components/Opinions/Opinions";
 
 export default function Landing() {
 
@@ -66,6 +67,7 @@ export default function Landing() {
       <Why />
       <Category />
       <Oursecrvices />
+      <Opinions />
     </>
   );
 }
