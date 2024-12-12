@@ -1,16 +1,39 @@
 @use "../../helpers/functions" as *;
 
 .main-opinions-container {
+    h1 {
+        color: $secondColor;
+        font-size: 25px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+        @include Breakpoints(mobile) {
+            text-align: center;
+        }
+    }
     width: 80%;
     margin: 10px auto;
-    border: 1px solid black;
     .main-opinions {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        @include Breakpoints(mobile) {
+            flex-direction: column;
+        }
         .card-opinions {
+            margin-bottom: 30px;
             border: 1px solid black;
             border-radius: 30px;
             width: 40%;
-            min-height: 400px;
+            min-height: 380px;
             padding: 10px;
+            @include Breakpoints(mobile) {
+                width: 100%;
+            }
             .head-of-opinons {
                 border-bottom: 1px solid black;
                 padding: 10px;
@@ -28,8 +51,22 @@
                 padding: 28px;
                 font-size: 20px;
                 font-weight: 600;
+                border-bottom: 1px solid black;
+                min-height: 200px;
             }
             .footer-of-opinons {
+                padding: 27px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .avatar {
+                    width: 50px;
+                    height: 50px;
+                    background-image: url("../../Assets/Assets/Avatar/Image-140.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
             }
         }
     }

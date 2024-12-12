@@ -26,8 +26,80 @@ export default function Opinions() {
                     </div>
 
                     <div className="footer-of-opinons">
-                        <span>Name</span>
-                        <span><img src="" alt="" /></span>
+                        <span>Ahmed Mohamed</span>
+                        <span className='avatar rounded-full'>
+
+                        </span>
+                    </div>
+
+                </div>
+
+                <div className="card-opinions">
+
+                    <div className="head-of-opinons">
+                        <span>
+                            <ImQuotesLeft />
+                        </span>
+                        <span className='flex items-center'>
+                            <IoStar /> (4.8/5)
+                        </span>
+                    </div>
+
+                    <div className="body-of-opinons">
+                        <p>"Zam transformed our online store into a sleek, user-friendly platform. Our sales skyrocketed by 35% in just three months! Their team is professional, creative, and incredibly responsive."</p>
+                    </div>
+
+                    <div className="footer-of-opinons">
+                        <span>Ahmed Mohamed</span>
+                        <span className='avatar rounded-full'>
+
+                        </span>
+                    </div>
+
+                </div>
+                <div className="card-opinions">
+
+                    <div className="head-of-opinons">
+                        <span>
+                            <ImQuotesLeft />
+                        </span>
+                        <span className='flex items-center'>
+                            <IoStar /> (4.8/5)
+                        </span>
+                    </div>
+
+                    <div className="body-of-opinons">
+                        <p>"Zam transformed our online store into a sleek, user-friendly platform. Our sales skyrocketed by 35% in just three months! Their team is professional, creative, and incredibly responsive."</p>
+                    </div>
+
+                    <div className="footer-of-opinons">
+                        <span>Ahmed Mohamed</span>
+                        <span className='avatar rounded-full'>
+
+                        </span>
+                    </div>
+
+                </div>
+                <div className="card-opinions">
+
+                    <div className="head-of-opinons">
+                        <span>
+                            <ImQuotesLeft />
+                        </span>
+                        <span className='flex items-center'>
+                            <IoStar /> (4.8/5)
+                        </span>
+                    </div>
+
+                    <div className="body-of-opinons">
+                        <p>"Zam transformed our online store into a sleek, user-friendly platform. Our sales skyrocketed by 35% in just three months! Their team is professional, creative, and incredibly responsive."</p>
+                    </div>
+
+                    <div className="footer-of-opinons">
+                        <span>Ahmed Mohamed</span>
+                        <span className='avatar rounded-full'>
+
+                        </span>
                     </div>
 
                 </div>
