@@ -1,1 +1,83 @@
 @use "../../helpers/functions" as *;
+
+.main-still {
+    width: 80%;
+    background-color: whitesmoke;
+    margin: 50px auto;
+    border-radius: 10px;
+
+    .still {
+        height: 240px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            padding: 10px;
+        }
+
+        p {
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            color: white;
+            background-color: $secondColor;
+            padding: 10px;
+            border-radius: 10px;
+            width: 10%;
+        }
+    }
+
+    // Responsive styles
+    @include Breakpoints(mobile) {
+        width: 90%;
+
+        .still {
+            height: auto;
+
+            button {
+                width: 50%;
+            }
+        }
+    }
+
+    @include Breakpoints(small) {
+        width: 85%;
+
+        .still {
+            height: 200px;
+
+            button {
+                width: 30%;
+            }
+        }
+    }
+
+    @include Breakpoints(medium) {
+        width: 80%;
+
+        .still {
+            height: 220px;
+
+            button {
+                width: 20%;
+            }
+        }
+    }
+
+    @include Breakpoints(large) {
+        width: 70%;
+
+        .still {
+            height: 240px;
+
+            button {
+                width: 10%;
+            }
+        }
+    }
+}

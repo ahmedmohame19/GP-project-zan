@@ -8,6 +8,8 @@ import Oursecrvices from "../../components/Ourservices/Oursecrvices";
 import Opinions from "../../components/Opinions/Opinions";
 import Fqa from "../../components/Fqa/Fqa";
 import Stillhave from "../../components/Still/Stillhave";
+import PartnershipSlider from "../../components/PartnershipSlider/PartnershipSlider";
+import Countdown from "../../components/Countcown/Countdown";
 
 export default function Landing() {
 
@@ -74,6 +76,8 @@ export default function Landing() {
       <Opinions />
       <Fqa />
       <Stillhave />
+      <PartnershipSlider />
+      <Countdown />
       {/* rest components  */}
     </>
   );
