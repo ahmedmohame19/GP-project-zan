@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./Layout.scss"
 // import { isTokenExpired } from '../../helpers/JwtUtils';
@@ -16,6 +17,7 @@ export default function Layout() {
             <Navbar />
             <Outlet>
             </Outlet>
+            <Footer />
         </div>
     )
 }

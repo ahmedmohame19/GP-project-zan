@@ -8,20 +8,5 @@ export default function Countdown() {
                 <img src={count} alt="count" />
             </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
     </>
 }
