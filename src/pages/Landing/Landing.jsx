@@ -6,6 +6,8 @@ import "./Landing.scss";
 import Category from "../../components/Categoery/Category";
 import Oursecrvices from "../../components/Ourservices/Oursecrvices";
 import Opinions from "../../components/Opinions/Opinions";
+import Fqa from "../../components/Fqa/Fqa";
+import Stillhave from "../../components/Still/Stillhave";
 
 export default function Landing() {
 
@@ -64,10 +66,15 @@ export default function Landing() {
           </motion.div>
         </div>
       </motion.div>
+
+      {/* rest components  */}
       <Why />
       <Category />
       <Oursecrvices />
       <Opinions />
+      <Fqa />
+      <Stillhave />
+      {/* rest components  */}
     </>
   );
 }
