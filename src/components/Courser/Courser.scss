@@ -1,0 +1,25 @@
+.custom-cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #f54c34;
+    border-radius: 50%;
+    background-color: #f54c34;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    will-change: transform;
+}
+
+.click-effect {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff5722;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+}

@@ -1,0 +1,59 @@
+@use "../../helpers/functions" as *;
+.Main-our {
+    margin-top: 30px;
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        padding: 20px;
+        font-weight: 600;
+    }
+    .main-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $BaseColor;
+        width: 100%;
+        height: 400px;
+        .card:nth-child(4) {
+            background-color: $therdColor;
+            .number {
+                color: black;
+            }
+            .text {
+                color: black;
+            }
+        }
+        .card {
+            border-radius: 20px;
+            background-color: $Fifth;
+            height: 300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+
+            .number {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                color: white;
+                font-size: 30px;
+            }
+            .text {
+                color: white;
+                h2 {
+                    font-size: 25px;
+                }
+                p {
+                    margin-top: 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
