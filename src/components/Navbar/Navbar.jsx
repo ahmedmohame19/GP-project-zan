@@ -57,60 +57,23 @@ export default function Navbar() {
 
                     <div className="w-full md:block md:w-auto desktop-nav">
                         <ul className="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg  md:flex-row md:mt-0 md:text-sm md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 md:space-x-8 md:rtl:space-x-reverse">
-                            {/* Home Dropdown */}
                             <li>
                                 <button
                                     className="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded  md:hover:bg-transparent md:border-0  md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                                    onClick={() => handleDropdownToggle('home')}
                                 >
-                                    Home <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
-                                    </svg>
+                                    <Link to={"/"}>
+                                        Home
+                                    </Link>
                                 </button>
-
-                                {openDropdown.home && (
-                                    <div className="z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute">
-                                        <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownNavbarLink">
-                                            <li>
-                                                <Link to="/dashboard" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/settings" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/earnings" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</Link>
-                                            </li>
-                                        </ul>
-                                        <div className="py-1">
-                                            <Link to="/signout" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</Link>
-                                        </div>
-                                    </div>
-                                )}
                             </li>
-
-                            {/* Shop Dropdown */}
                             <li>
                                 <button
                                     className="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded  md:hover:bg-transparent md:border-0  md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                                    onClick={() => handleDropdownToggle('shop')}
                                 >
-                                    Shop <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
-                                    </svg>
+                                    <Link to={"/Shop"}>
+                                        Shop
+                                    </Link>
                                 </button>
-
-                                {openDropdown.shop && (
-                                    <div className="z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute">
-                                        <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                            <li>
-                                                <Link to="/dashboard" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Shop Item 1</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/settings" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Shop Item 2</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                )}
                             </li>
 
                             {/* Services Dropdown */}
@@ -141,25 +104,11 @@ export default function Navbar() {
                             <li>
                                 <button
                                     className="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded  md:hover:bg-transparent md:border-0  md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                                    onClick={() => handleDropdownToggle('Contact')}
                                 >
-                                    Contact <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
-                                    </svg>
+                                    <Link>
+                                        contact
+                                    </Link>
                                 </button>
-
-                                {openDropdown.Contact && (
-                                    <div className="z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 absolute">
-                                        <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                            <li>
-                                                <Link to="/dashboard" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contact Item 1</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/settings" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contact Item 2</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                )}
                             </li>
                             {/* Join us Dropdown */}
                             <li>
