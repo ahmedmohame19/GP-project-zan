@@ -1,0 +1,139 @@
+.category-section {
+  margin: 2rem 0;
+  padding: 0 1rem;
+
+  .category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .view-all {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #777;
+
+      span {
+        margin-right: 0.25rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .swiper-container {
+    position: relative;
+    padding: 0 2rem;
+
+    .swiper-prev,
+    .swiper-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ff5f5f;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+
+      &:hover {
+        background-color: darken(#ff5f5f, 10%);
+      }
+    }
+
+    .swiper-prev {
+      left: 0;
+    }
+
+    .swiper-next {
+      right: 0;
+    }
+  }
+
+  .category-swiper {
+    width: 100%;
+  }
+
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      .category-name {
+        color: #ff5f5f;
+      }
+    }
+
+    .category-icon {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .category-name {
+      font-size: 0.9rem;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+.category-item.active {
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .category-name {
+    color: #ff5f5f;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-section {
+    .category-header {
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .category-item {
+      .category-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      .category-name {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

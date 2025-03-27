@@ -1,0 +1,235 @@
+// PopularProducts.scss
+.popular-products-section {
+    margin: 2rem 0;
+    padding: 0 1rem;
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .view-all {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: #777;
+
+            span {
+                margin-right: 0.25rem;
+                font-size: 0.9rem;
+            }
+
+            &:hover {
+                color: #ff5f5f;
+            }
+        }
+    }
+
+    .products-wrapper {
+        position: relative;
+        padding: 0 1rem;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-90%);
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff5f5f;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            svg {
+                width: 20px;
+            }
+            &:hover {
+                background-color: darken(#ff5f5f, 10%);
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .swiper-button-prev {
+            left: -1.5rem;
+        }
+
+        .swiper-button-next {
+            right: -1.5rem;
+        }
+
+        .swiper-button-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    .products-swiper {
+        width: 100%;
+        padding: 1rem 0;
+
+        .swiper-slide {
+            height: auto; // Allow slides to size based on content
+        }
+    }
+
+    .product-card {
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        height: 100%;
+
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+
+            .product-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .discount-tag {
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+                background-color: #ff5f5f;
+                color: white;
+                border-radius: 0.25rem;
+                padding: 0.25rem 0.5rem;
+                font-size: 0.8rem;
+                font-weight: bold;
+                z-index: 2;
+            }
+
+            .add-to-cart {
+                position: absolute;
+                bottom: 0.5rem;
+                right: 0.5rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                background-color: white;
+                color: #333;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 2;
+
+                &:hover {
+                    background-color: #ff5f5f;
+                    color: white;
+                }
+            }
+        }
+
+        &:hover {
+            .product-image {
+                transform: scale(1.05);
+            }
+        }
+
+        .product-info {
+            padding: 1rem;
+
+            .product-name {
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+                color: #333;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .product-rating {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+
+                .stars {
+                    display: flex;
+                    margin-right: 0.5rem;
+
+                    .star {
+                        color: #ddd;
+                        font-size: 0.9rem;
+
+                        &.filled {
+                            color: #ffd700;
+                        }
+                    }
+                }
+
+                .review-count {
+                    font-size: 0.8rem;
+                    color: #777;
+                }
+            }
+
+            .product-price {
+                display: flex;
+                align-items: center;
+
+                .current-price {
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    color: #333;
+                }
+
+                .old-price {
+                    margin-left: 0.5rem;
+                    font-size: 0.9rem;
+                    color: #999;
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .popular-products-section {
+        .products-wrapper {
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 1.75rem;
+                height: 1.75rem;
+            }
+        }
+
+        .product-card {
+            .product-info {
+                .product-name {
+                    font-size: 0.9rem;
+                }
+
+                .product-price {
+                    .current-price {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
