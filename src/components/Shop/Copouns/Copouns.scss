@@ -1,0 +1,45 @@
+.coupon-swiper-container {
+    margin: 2rem 0;
+    padding: 0 1rem;
+
+    .coupon-swiper {
+        width: 100%;
+
+        .swiper-slide {
+            height: auto;
+        }
+    }
+
+    .coupon-image-card {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        cursor: pointer;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .coupon-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .coupon-swiper-container {
+        .coupon-image-card {
+            max-height: 220px;
+            .coupon-image {
+                height: 100%;
+            }
+        }
+    }
+}
