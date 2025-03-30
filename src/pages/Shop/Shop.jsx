@@ -21,6 +21,7 @@ import sleep10Coupon from '../../Assets/Assets/Shop/copouns/Aura_AC_sEN-DT_1.jpg
 import sagadaCoupon from '../../Assets/Assets/Shop/copouns/Aura_AC_sEN-DT_1.jpg.png';
 
 import allCouponsCoupon from '../../Assets/Assets/Shop/copouns/Aura_AC_sEN-DT_1.jpg.png';
+import ProductGrid from '../../components/Shop/GridProducts/GridProducts';
 
 
 // fake images 
@@ -106,6 +107,99 @@ export default function Shop() {
             code: ''
         }
     ];
+    const productSections = [
+        {
+            title: "New Arrivals",
+            viewAllLink: "/new-arrivals",
+            products: [
+                {
+                    name: "Beech Wood and Plastic Backed Fabri",
+                    image: tuffetSofaImage,
+                    originalPrice: "3205",
+                    currentPrice: "1775",
+                },
+                {
+                    name: "Bosch rotary Professional Drill unit",
+                    image: tuffetSofaImage,
+                    originalPrice: "5497",
+                    currentPrice: "4793",
+                },
+                {
+                    name: "Beech Wood and Plastic Backed Fabri",
+                    image: tuffetSofaImage,
+                    originalPrice: "3205",
+                    currentPrice: "1775",
+                },
+                {
+                    name: "Bosch rotary Professional Drill unit",
+                    image: tuffetSofaImage,
+                    originalPrice: "5497",
+                    currentPrice: "4793",
+                },
+            ]
+        },
+        {
+            title: "Mega Deals",
+            viewAllLink: "/mega-deals",
+            products: [
+                {
+                    name: "Metal Bunk Bed Grey - 200x120x190",
+                    image: dualChairImage,
+                    originalPrice: "16600",
+                    currentPrice: "12849",
+                },
+                {
+                    name: "Outdoor Set - Multi Color",
+                    image: dualChairImage,
+                    originalPrice: "6934",
+                    currentPrice: "5449",
+                },
+                {
+                    name: "Outdoor Set - Multi Color",
+                    image: dualChairImage,
+                    originalPrice: "6934",
+                    currentPrice: "5449",
+                },
+                {
+                    name: "Outdoor Set - Multi Color",
+                    image: dualChairImage,
+                    originalPrice: "6934",
+                    currentPrice: "5449",
+                },
+
+            ]
+        },
+        {
+            title: "Essentials",
+            viewAllLink: "/essentials",
+            products: [
+                {
+                    name: "MDF Wardrobe Two Shutters White - 2",
+                    image: tuffetSofaImage,
+                    originalPrice: "25150",
+                    currentPrice: "15849",
+                },
+                {
+                    name: "MDF Coffee Table White - 40x50x100",
+                    image: tuffetSofaImage,
+                    originalPrice: "6740",
+                    currentPrice: "4339",
+                },
+                {
+                    name: "MDF Wardrobe Two Shutters White - 2",
+                    image: tuffetSofaImage,
+                    originalPrice: "25150",
+                    currentPrice: "15849",
+                },
+                {
+                    name: "MDF Coffee Table White - 40x50x100",
+                    image: tuffetSofaImage,
+                    originalPrice: "6740",
+                    currentPrice: "4339",
+                },
+            ]
+        }
+    ];
     // fake data 
     return (
         <div className='Main-Shop'>
@@ -126,10 +220,68 @@ export default function Shop() {
                     slidesPerView={4}
                     spaceBetween={20}
                 />
+
                 <Copouns coupons={myCoupons}
                     slidesPerView={4}
                     spaceBetween={20}
-                    autoplayDelay={2000} />
+                    autoplayDelay={2000}
+                />
+                <div className="shop-banner-1">
+
+                </div>
+
+                {/* prod by categores */}
+                <ProductsMainslider
+                    title="Tv units"
+                    viewAllText="See All Products"
+                    products={popularProducts}
+                    showRating={true}
+                    showAddToCart={true}
+                    slidesPerView={4}
+                    spaceBetween={20}
+                />
+                <ProductsMainslider
+                    title="Tv units"
+                    viewAllText="See All Products"
+                    products={popularProducts}
+                    showRating={true}
+                    showAddToCart={true}
+                    slidesPerView={4}
+                    spaceBetween={20}
+                />
+                {/* prod by categores */}
+                <ProductGrid categories={productSections} />
+
+                <ProductsMainslider
+                    title="Tv units"
+                    viewAllText="See All Products"
+                    products={popularProducts}
+                    showRating={true}
+                    showAddToCart={true}
+                    slidesPerView={4}
+                    spaceBetween={20}
+                />
+                <ProductsMainslider
+                    title="Tv units"
+                    viewAllText="See All Products"
+                    products={popularProducts}
+                    showRating={true}
+                    showAddToCart={true}
+                    slidesPerView={4}
+                    spaceBetween={20}
+                />
+                <ProductsMainslider
+                    title="Tv units"
+                    viewAllText="See All Products"
+                    products={popularProducts}
+                    showRating={true}
+                    showAddToCart={true}
+                    slidesPerView={4}
+                    spaceBetween={20}
+                />
+            </div>
+            <div className="shop-banner-2">
+
             </div>
         </div>
     )
