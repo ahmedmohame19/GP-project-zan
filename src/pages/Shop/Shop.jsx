@@ -22,6 +22,8 @@ import sagadaCoupon from '../../Assets/Assets/Shop/copouns/Aura_AC_sEN-DT_1.jpg.
 
 import allCouponsCoupon from '../../Assets/Assets/Shop/copouns/Aura_AC_sEN-DT_1.jpg.png';
 import ProductGrid from '../../components/Shop/GridProducts/GridProducts';
+import OurCollections from '../../components/Shop/Ourcollection/Ourcoleection';
+import Countdown from '../../components/Countcown/Countdown';
 
 
 // fake images 
@@ -200,6 +202,116 @@ export default function Shop() {
             ]
         }
     ];
+    const productData = [
+        {
+            id: 1,
+            name: 'Rotary Table',
+            price: 149,
+            image: tuffetSofaImage,
+            category: 'Tables',
+            rating: 4.5,
+            reviews: 5325
+        },
+        {
+            id: 2,
+            name: 'Red Fabric Sofa',
+            price: 550,
+            image: tuffetSofaImage,
+            category: 'Sofas',
+            rating: 4.3,
+            reviews: 5325
+        },
+        {
+            id: 3,
+            name: 'Tufted Linen Sofa',
+            price: 299,
+            image: tuffetSofaImage,
+            category: 'Sofas',
+            rating: 4.7,
+            reviews: 5325
+        },
+        {
+            id: 4,
+            name: 'Chair',
+            price: 149,
+            image: tuffetSofaImage,
+            category: 'Chairs',
+            rating: 4.5,
+            reviews: 5325
+        },
+        {
+            id: 5,
+            name: 'Yellow Sofa',
+            price: 149,
+            image: tuffetSofaImage,
+            category: 'Sofas',
+            rating: 4.6,
+            reviews: 5325
+        },
+        {
+            id: 6,
+            name: 'Rotary Chair',
+            price: 149,
+            image: tuffetSofaImage,
+            category: 'Chairs',
+            rating: 4.5,
+            reviews: 5325
+        },
+        {
+            id: 7,
+            name: 'Rotary Table',
+            price: 149,
+            image: tuffetSofaImage,
+            category: 'Tables',
+            rating: 4.8,
+            reviews: 5325
+        },
+        {
+            id: 8,
+            name: 'Red Fabric Sofa',
+            price: 550,
+            image: miniTableImage,
+            category: 'Sofas',
+            rating: 4.3,
+            reviews: 5325
+        },
+        {
+            id: 9,
+            name: 'Tufted Linen Sofa',
+            price: 299,
+            image: tuffetSofaImage,
+            category: 'Sofas',
+            rating: 4.7,
+            reviews: 5325
+        },
+        {
+            id: 10,
+            name: 'Chair',
+            price: 149,
+            image: miniTableImage,
+            category: 'Chairs',
+            rating: 4.5,
+            reviews: 5325
+        },
+        {
+            id: 11,
+            name: 'Yellow Sofa',
+            price: 149,
+            image: tuffetSofaImage,
+            category: 'Sofas',
+            rating: 4.6,
+            reviews: 5325
+        },
+        {
+            id: 12,
+            name: 'Rotary Chair',
+            price: 149,
+            image: miniTableImage,
+            category: 'Chairs',
+            rating: 4.5,
+            reviews: 5325
+        }
+    ];
     // fake data 
     return (
         <div className='Main-Shop'>
@@ -283,6 +395,8 @@ export default function Shop() {
             <div className="shop-banner-2">
 
             </div>
+            <OurCollections products={productData} />
+            <Countdown />
         </div>
     )
 }

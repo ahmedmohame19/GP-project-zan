@@ -105,7 +105,7 @@ const ProductsMainslider = ({
                                 className="product-card"
                                 variants={itemVariants}
                                 initial="hidden"
-                                animate="show"
+                                whileInView={"show"}
                                 whileHover={{
                                     y: -5,
                                     boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
