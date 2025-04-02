@@ -10,6 +10,7 @@ import './ProductsMainslider.scss';
 // Import Swiper styles
 import 'swiper/scss';
 import 'swiper/scss/navigation';
+import { Link } from 'react-router-dom';
 
 const ProductsMainslider = ({
     title = "Popular Products",
@@ -101,47 +102,50 @@ const ProductsMainslider = ({
                 >
                     {products.map((product, index) => (
                         <SwiperSlide key={product.id || index}>
-                            <motion.div
-                                className="product-card"
-                                variants={itemVariants}
-                                initial="hidden"
-                                whileInView={"show"}
-                                whileHover={{
-                                    y: -5,
-                                    boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
-                                    transition: { duration: 0.3 }
-                                }}
-                            >
-                                <div className="product-image-container">
-                                    <DiscountTag discount={product.discount} />
-                                    <img src={product.image} alt={product.name} className="product-image" />
+                            <Link to={'/productdetails/12'} >
 
-                                    {showAddToCart && (
-                                        <motion.button
-                                            className="add-to-cart"
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                        >
-                                            <FiShoppingBag />
-                                        </motion.button>
-                                    )}
-                                </div>
+                                <motion.div
+                                    className="product-card"
+                                    variants={itemVariants}
+                                    initial="hidden"
+                                    whileInView={"show"}
+                                    whileHover={{
+                                        y: -5,
+                                        boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
+                                        transition: { duration: 0.3 }
+                                    }}
+                                >
+                                    <div className="product-image-container">
+                                        <DiscountTag discount={product.discount} />
+                                        <img src={product.image} alt={product.name} className="product-image" />
 
-                                <div className="product-info">
-                                    <h3 className="product-name">{product.name}</h3>
-
-                                    {showRating && (
-                                        <StarRating rating={product.rating} reviewCount={product.reviewCount} />
-                                    )}
-
-                                    <div className="product-price">
-                                        <span className="current-price">${product.price.toFixed(2)}</span>
-                                        {product.oldPrice && (
-                                            <span className="old-price">${product.oldPrice.toFixed(2)}</span>
+                                        {showAddToCart && (
+                                            <motion.button
+                                                className="add-to-cart"
+                                                whileHover={{ scale: 1.1 }}
+                                                whileTap={{ scale: 0.9 }}
+                                            >
+                                                <FiShoppingBag />
+                                            </motion.button>
                                         )}
                                     </div>
-                                </div>
-                            </motion.div>
+
+                                    <div className="product-info">
+                                        <h3 className="product-name">{product.name}</h3>
+
+                                        {showRating && (
+                                            <StarRating rating={product.rating} reviewCount={product.reviewCount} />
+                                        )}
+
+                                        <div className="product-price">
+                                            <span className="current-price">${product.price.toFixed(2)}</span>
+                                            {product.oldPrice && (
+                                                <span className="old-price">${product.oldPrice.toFixed(2)}</span>
+                                            )}
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>

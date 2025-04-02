@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Ourcollection.scss';
+import { Link } from 'react-router-dom';
 
 const OurCollections = ({ products: initialProducts }) => {
     const [products, setProducts] = useState(initialProducts || []);
@@ -98,29 +99,31 @@ const OurCollections = ({ products: initialProducts }) => {
 
             <div className="products-grid">
                 {products.map((product, index) => (
-                    <div key={index} className="product-card">
-                        <div className="product-image-container">
-                            <img
-                                src={product.image}
-                                alt={product.name}
-                                className="product-image"
-                            />
-                        </div>
-                        <div className="product-info">
-                            <div className="flex justify-between items-center mb-1">
-                                <h3 className="product-name">{product.name}</h3>
-                                <p className="product-price">${product.price}</p>
+                    <Link to={"/productdetails/12"}>
+                        <div key={index} className="product-card">
+                            <div className="product-image-container">
+                                <img
+                                    src={product.image}
+                                    alt={product.name}
+                                    className="product-image"
+                                />
                             </div>
-                            <div className="product-rating">
-                                <div className="stars">
-                                    {[...Array(5)].map((_, i) => (
-                                        <span key={i} className={`star ${i < Math.floor(product.rating) ? 'filled' : ''}`}>★</span>
-                                    ))}
+                            <div className="product-info">
+                                <div className="flex justify-between items-center mb-1">
+                                    <h3 className="product-name">{product.name}</h3>
+                                    <p className="product-price">${product.price}</p>
                                 </div>
-                                <span className="rating-count">({product.reviews})</span>
+                                <div className="product-rating">
+                                    <div className="stars">
+                                        {[...Array(5)].map((_, i) => (
+                                            <span key={i} className={`star ${i < Math.floor(product.rating) ? 'filled' : ''}`}>★</span>
+                                        ))}
+                                    </div>
+                                    <span className="rating-count">({product.reviews})</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 

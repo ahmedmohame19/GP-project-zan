@@ -1,29 +1,32 @@
 // ProductGrid.jsx
 import React from 'react';
 import './GridProducts.scss';
+import { Link } from 'react-router-dom';
 
 const ProductGrid = ({ categories }) => {
 
     const ProductCard = ({ product }) => (
-        <div className="product-card">
-            <div className="product-image">
-                <img src={product.image} alt={product.name} />
-            </div>
-            <div className="product-details">
-                <h3 className="product-name">{product.name}</h3>
-                <div className="product-pricing">
-                    <div className="price-info">
-                        {product.originalPrice && (
-                            <span className="original-price">{product.originalPrice}</span>
-                        )}
-                        <span className="current-price">{product.currentPrice} EGP</span>
+        <Link to={"/productdetails/12"}>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src={product.image} alt={product.name} />
+                </div>
+                <div className="product-details">
+                    <h3 className="product-name">{product.name}</h3>
+                    <div className="product-pricing">
+                        <div className="price-info">
+                            {product.originalPrice && (
+                                <span className="original-price">{product.originalPrice}</span>
+                            )}
+                            <span className="current-price">{product.currentPrice} EGP</span>
+                        </div>
+                        <button className="add-to-cart">
+                            <i className="cart-icon"></i>
+                        </button>
                     </div>
-                    <button className="add-to-cart">
-                        <i className="cart-icon"></i>
-                    </button>
                 </div>
             </div>
-        </div>
+        </Link>
     );
     return (
         <div className="product-sections-container">
