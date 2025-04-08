@@ -77,7 +77,7 @@ const CategoryShop = () => {
                     {categories.map((category, index) => (
                         <SwiperSlide key={index}>
                             <div className="category-item">
-                                <Link to={"/"}>
+                                <Link to={`/categoery/${category.name}`}>
                                     <div className="category-icon">
                                         <img src={category.icon} alt={category.name} />
                                     </div>

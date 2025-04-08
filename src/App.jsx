@@ -6,6 +6,7 @@ import Loading from './components/Loading/Loading';
 import Landing from './pages/Landing/Landing';
 import ProductDetails from './pages/Productdetails/ProductDetails';
 import ContactUs from './pages/ContactUs/ContactUs';
+import CategoryDetails from './pages/CategoryDeatails/CategoryDetails';
 
 const Shop = lazy(() => import('./pages/Shop/Shop'));
 
@@ -18,6 +19,7 @@ function App() {
         { index: true, element: <Landing /> },
         { path: "Shop", element: <Shop /> },
         { path: "productdetails/:id", element: <ProductDetails /> },
+        { path: "categoery/:name", element: <CategoryDetails /> },
         { path: "contactus", element: <ContactUs /> },
       ],
     },
