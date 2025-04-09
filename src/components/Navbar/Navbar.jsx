@@ -10,6 +10,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 import redSofaImage from '../../Assets/Assets/Shop/popular prod/Images-1.png';
 export default function Navbar() {
+
     const [openDropdown, setOpenDropdown] = useState({
         home: false,
         shop: false,
@@ -17,7 +18,9 @@ export default function Navbar() {
         services: false,
         joinUs: false
     });
+
     const [moblienav, setmoblienav] = useState(false);
+
     const [openCart, setOpenCart] = useState(false);
 
     const handleDropdownToggle = (dropdown) => {
@@ -220,12 +223,16 @@ export default function Navbar() {
                                     <span className="text-gray-600">Subtotal</span>
                                     <span className="font-semibold">$2,100.00</span>
                                 </div>
-                                <button className="w-full bg-gray-950 text-white py-2 rounded-md hover:bg-gray-700 transition">
-                                    View Cart
-                                </button>
-                                <button className="w-full bg-gray-950 text-white py-2 rounded-md mt-2 hover:bg-gray-700 transition">
-                                    Checkout
-                                </button>
+                                <Link to={"/cart"}>
+                                    <button onClick={() => toggleCart()} className="w-full bg-gray-950 text-white py-2 rounded-md hover:bg-gray-700 transition">
+                                        View Cart
+                                    </button>
+                                </Link>
+                                <Link to={""}>
+                                    <button onClick={() => toggleCart()} className="w-full bg-gray-950 text-white py-2 rounded-md mt-2 hover:bg-gray-700 transition">
+                                        Checkout
+                                    </button>
+                                </Link>
                             </div>
                         </motion.div>
                     )}
