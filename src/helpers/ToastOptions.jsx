@@ -16,7 +16,7 @@ export const ToastOptions = (Type) => {
         return {
             theme: "colored",
             className: "ToastShare",
-            position: "bottom-center", // This sets the toast position to center bottom
+            position: "bottom-center",
         };
     }
 }
