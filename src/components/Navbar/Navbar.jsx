@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import "./Navbar.scss";
 import cart from "../../Assets/Assets/icons/Icon.png";
-import { BsCart4 } from "react-icons/bs";
+
 import logo from "../../Assets/Assets/Logo/white.svg";
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoCloseCircle } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import CheckoutPopup from '../Checkoutpopup/Checkoutpopup';
 
+import redSofaImage from '../../Assets/Assets/Shop/popular prod/Images-1.png';
 export default function Navbar() {
     const [openDropdown, setOpenDropdown] = useState({
         home: false,
@@ -161,9 +161,17 @@ export default function Navbar() {
                             </li>
                         </ul>
                     </div>
-                    <div className="cart cursor-pointer relative" onClick={toggleCart}>
-                        <img src={cart} alt="cart" />
-                        <span className="cart-count absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
+
+                    <div className="nav-right-items">
+                        <div className="cart cursor-pointer relative" onClick={toggleCart}>
+                            <img src={cart} alt="cart" />
+                            <span className="cart-count absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
+                        </div>
+                        <div className="login-button rounded-md">
+                            <Link to="/login" className="w-28 text-center  text-white py-2 px-4 rounded-md transition">
+                                Login
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -188,7 +196,7 @@ export default function Navbar() {
                                 {cartItems.map(item => (
                                     <div key={item.id} className="p-4 border-b border-gray-100 flex items-center">
                                         <div className="w-16 h-16 bg-gray-100 rounded-md mr-3 flex items-center justify-center">
-                                            <img src="/api/placeholder/80/80" alt={item.name} className="max-w-full max-h-full" />
+                                            <img src={redSofaImage} alt={item.name} className="max-w-full max-h-full" />
                                         </div>
                                         <div className="flex-grow">
                                             <h4 className="text-sm font-medium text-gray-800">{item.name}</h4>
@@ -212,10 +220,10 @@ export default function Navbar() {
                                     <span className="text-gray-600">Subtotal</span>
                                     <span className="font-semibold">$2,100.00</span>
                                 </div>
-                                <button className="w-full bg-gray-800 text-white py-2 rounded-md hover:bg-gray-700 transition">
+                                <button className="w-full bg-gray-950 text-white py-2 rounded-md hover:bg-gray-700 transition">
                                     View Cart
                                 </button>
-                                <button className="w-full bg-gray-800 text-white py-2 rounded-md mt-2 hover:bg-red-700 transition">
+                                <button className="w-full bg-gray-950 text-white py-2 rounded-md mt-2 hover:bg-gray-700 transition">
                                     Checkout
                                 </button>
                             </div>

@@ -13,6 +13,30 @@ nav {
         flex-wrap: wrap;
         align-items: center;
 
+        .nav-right-items {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .login-button {
+                background-color: $secondColor;
+                @include Breakpoints(mobile) {
+                    display: none;
+                }
+
+                a {
+                    display: inline-block;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                    border: 2px solid transparent;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+
         .cart {
             font-size: 30px;
             color: white;
