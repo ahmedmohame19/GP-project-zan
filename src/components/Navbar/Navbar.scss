@@ -1,49 +1,118 @@
 @use "../../helpers/functions" as *;
+
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
+
     .mainnav {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        // justify-content: space-around !important;
+
         .cart {
+            font-size: 30px;
+            color: white;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            .cart-count {
+                background-color: #ff4d4d;
+                color: white;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                font-weight: bold;
+            }
+
             @include Breakpoints(mobile) {
                 display: none;
             }
         }
+
         .desktop-nav {
             @include Breakpoints(mobile) {
                 display: none;
             }
         }
     }
+
     background-image: url("../../Assets/Assets/background.png");
     background-size: cover;
     background-position: top;
     padding: 10px;
+
     ul {
         button {
             color: white !important;
         }
+
         svg {
             color: white !important;
         }
     }
+
+    // Cart Popup Styling
+    .cart-popup {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+
+        h3 {
+            margin: 0;
+        }
+
+        .max-h-80 {
+            scrollbar-width: thin;
+            scrollbar-color: #d1d5db transparent;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #d1d5db;
+                border-radius: 20px;
+            }
+        }
+
+        button {
+            transition: all 0.2s ease;
+
+            &:hover {
+                transform: translateY(-1px);
+            }
+        }
+    }
 }
+
 .nav2 {
     z-index: 200;
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
+
     .close {
         z-index: 101;
-        // background-color: black;
         width: 100%;
         text-align: center;
         font-size: 30px;
@@ -53,15 +122,19 @@ nav {
         margin-bottom: 20px;
         color: white;
     }
+
     @include Breakpoints(medium) {
         display: none;
     }
+
     @include Breakpoints(small) {
         display: none;
     }
+
     @include Breakpoints(large) {
         display: none;
     }
+
     .mobilemenue {
         width: 100%;
         height: 100%;
@@ -72,6 +145,7 @@ nav {
         align-items: center;
         justify-content: center;
         padding: 10px;
+
         .head {
             width: 80%;
             display: flex;
@@ -81,6 +155,7 @@ nav {
             border: 1px solid white;
             border-radius: 20px/120px;
         }
+
         button {
             display: flex;
             flex-direction: row;
