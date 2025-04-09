@@ -320,7 +320,7 @@ export default function Shop() {
 
                 </div>
             </div>
-            <CategoryShop  />
+            <CategoryShop />
             <div className="Shop-content">
 
                 <ProductsMainslider

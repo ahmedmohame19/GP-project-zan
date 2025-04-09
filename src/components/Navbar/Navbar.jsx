@@ -168,7 +168,7 @@ export default function Navbar() {
                             <span className="cart-count absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
                         </div>
                         <div className="login-button rounded-md">
-                            <Link to="/login" className="w-28 text-center  text-white py-2 px-4 rounded-md transition">
+                            <Link to="/Auth/Login" className="w-28 text-center  text-white py-2 px-4 rounded-md transition">
                                 Login
                             </Link>
                         </div>

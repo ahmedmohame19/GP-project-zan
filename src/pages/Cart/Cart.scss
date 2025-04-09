@@ -58,7 +58,6 @@ body {
     color: #555;
 }
 
-// Product columns
 .column {
     &.product-column {
         flex: 2;
@@ -114,7 +113,6 @@ body {
     }
 }
 
-// Quantity controls - exact match to the design
 .quantity-control {
     display: flex;
     align-items: center;
@@ -172,7 +170,6 @@ body {
     }
 }
 
-// Order summary - exact match to the design
 .order-summary {
     background-color: $light-color;
     border-radius: 4px;
@@ -268,7 +265,6 @@ body {
     }
 }
 
-// Request form section - exactly matching the design
 .request-container {
     background-color: $light-color;
     border-top: 1px solid $border-color;
@@ -330,7 +326,6 @@ body {
     }
 }
 
-// Responsive styles that match the design
 @media (max-width: 992px) {
     .checkout-layout {
         flex-direction: column;
